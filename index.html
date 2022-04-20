@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+       <!--font awesome-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <!--Import Google Icon Font-->
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://cdn.ckeditor.com/ckeditor5/33.0.0/classic/ckeditor.js"></script>
+      <title>MYadmin</title>
+  </head>
+<body>
+    
+
+  <header>
+    <nav class="blue ">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">MYadmin</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <li><a href="index.html">Dashboard</a></li>
+                  <li><a href="post.html">Posts</a></li>
+                  <li><a href="cat.html">Categories</a></li>
+                  <li><a href="com.html">Comments</a></li>
+                  <li><a href="user.html">Users</a></li>
+                  <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+                </ul>
+              </div>
+        </div>
+      </nav>
+
+      <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+          <div class="background">
+            <img src="Landschaftsbild-mit-vielen-sch-C3-B6nen-Farben.jpg">
+          </div>
+          <a href="#user"><img class="circle" src="images-1 copie.jpg"></a>
+          <a href="#name"><span class="white-text name">Lalla</span></a>
+          <a href="#email"><span class="white-text email">lalla@gmail.com</span></a>
+        </div>
+    </li>
+    <li><a href="index.html"><i class="material-icons">view_quilt</i>Dashboard</a></li>
+    <li><a href="post.html">Posts</a></li>
+       <li><a href="cat.html">Categories</a></li>
+        <li><a href="com.html">Comments</a></li>
+        <li><a href="user.html">Users</a></li>
+        <li>
+          <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Account controls</a></li>
+        <li><a class="waves-effect" href="#!">Logout</a></li>
+      </ul>
+</header>
+
+<!-------cards--------->
+<section>
+  <div class="container-fluid">
+      <div class="row" style="margin-top: 2%;">
+        <div class="col s12 m3">
+          <div class="card blue">
+            <div class="card-content white-text center">
+              <span class="card-title"><i class="fa-solid fa-face-grin fa-2x"></i></span>
+              <p>Monthly Visitors</p>
+              35900
+              <div class="progress">
+                <div class="determinate white" style="width: 45%"></div>
+            </div>
+            </div>
+         </div>
+      </div>
+      <div class="col s12 m3">
+        <div class="card white">
+          <div class="card-content black-text center">
+            <span class="card-title"><i class="fa-solid fa-pencil fa-2x"></i></span>
+            <p>Blog Posts</p>
+                207
+            <div class="progress">
+              <div class="determinate blue" style="width: 25%"></div>
+          </div>
+          </div>
+       </div>
+    </div>
+    <div class="col s12 m3">
+      <div class="card blue">
+        <div class="card-content white-text center">
+          <span class="card-title"><i class="fa-solid fa-message fa-2x"></i></span>
+          <p>Commments</p>
+             2300 
+          <div class="progress">
+            <div class="determinate white" style="width: 45%"></div>
+        </div>
+        </div>
+     </div>
+  </div>
+  <div class="col s12 m3">
+    <div class="card white">
+      <div class="card-content black-text center">
+        <span class="card-title"><i class="fa-solid fa-user-group fa-2x"></i></span>
+        <p>Users</p>
+        410
+        <div class="progress">
+          <div class="determinate blue" style="width: 15%"></div>
+      </div>
+      </div>
+   </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!------------courbe------->
+<section>
+  <div class="container-fluid">
+    <div class="row blue" style="margin: 0%;">
+     <div class="col s12 m8">
+        <div class="card">
+          <div class="card-content">
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+      </div>
+    </div> 
+      </div>
+        <div class="col s12 m4 ">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <img src="images-1 copie.jpg" alt="" class="circle">
+              <span class="title"> Mammi</span>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, delectus. <br>
+                <span class="teal-text">Eprouve</span> <span class="red-text">Dani</span>
+              </p>
+            </li>
+          
+            <li class="collection-item avatar">
+              <img src="download.png" alt="" class="circle">
+              <span class="title">Moubarak</span>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, delectus. <br>
+                <span class="teal-text">Eprouve</span> <span class="red-text">Dani</span>
+              </p>
+            </li>
+            <li class="collection-item avatar">
+              <img src="download-3.jpg" alt="" class="circle">
+              <span class="title">Hanna</span>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, delectus. <br>
+                <span class="teal-text">Eprouve</span> <span class="red-text">Dani</span>
+              </p>
+            </li>
+          </ul>
+          </div>
+          </div>
+        </div>
+</section>
+<!-------------table------->
+  <section class="grey lighten-5">
+  <div class="containair" style="padding-top: 3%; padding-bottom: 3%;">
+    <div class="row" style="margin: 0%;">
+     <div class="col s8 m8">
+        <div class="card">
+          <div class="card-content">
+            <span>Recent Posts</span>
+        <table class="striped">
+          <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Categories</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr>
+              <td>Post One</td>
+              <td>Web Development</td>
+              <td><a class="waves-effect waves-light btn blue">DETAILS</a></td>
+            </tr>
+            <tr>
+              <td>Post two</td>
+              <td>Graphic Design</td>
+              <td><a class="waves-effect waves-light btn blue">DETAILS</a></td>
+            </tr>
+            <tr>
+              <td>Post tree</td>
+              <td>Web Development</td>
+              <td><a class="waves-effect waves-light btn blue">DETAILS</a></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+     </div>
+    </div>
+    <div class="col s12 m4">
+    <div class="card">
+      <div class="card-content">
+            <h4>Quick Todos</h4>
+            <div class="input-field">
+              <input id="password" type="password" class="validate">
+              <label for="password">Add Todo...</label>
+            </div>
+            <ul class="collection with-header">
+              <li class="collection-item"><div>Todo One<a href="#!" class="secondary-content"><i class="material-icons">close</i></a></div></li>
+              <li class="collection-item"><div>Todo Two<a href="#!" class="secondary-content"><i class="material-icons">close</i></a></div></li>
+           </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+   </div>
+</section>
+
+
+<footer>
+  <div class="container-fluid blue" style="padding: 3%;">
+    <div class="row">
+      <div class="col s12 m12 center white-text">
+        <p>MyAdmin CodeLoccol copyright © 2022</p>
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating blue waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons">mode_edit</i></a>
+                <!-- Modal Structure -->
+              <div id="modal1" class="modal">
+                <div class="modal-content">
+                  <h4 class="left">Add Categories</h4>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="password" type="password" class="validate">
+                      <label for="password">Title</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-blue btn-flat blue">Submit</a>
+                </div>
+              </div>  
+
+            <li><a class="btn-floating blue waves-effect waves-light btn modal-trigger" href="#modal2"><i class="material-icons">folder</i></a></li>
+            <!-- Modal Structure -->
+            <div id="modal2" class="modal">
+              <div class="modal-content black-text">
+                <h4 class="left">Add Posts</h4>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Title</option>
+                  <option value="1">Tech Gadgets</option>
+                  <option value="2">Business</option>
+                  <option value="3">Healt & Wellness</option>
+                </select>
+
+                <div class="input-field col s12">
+                  <select> 
+                    <option value="" disabled selected>Select option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                  <label>Category</label>
+                </div>
+              
+                <div id="editor">
+                  <div id="editor">
+                      <br> <br> <br> <br><br>
+                  </div> 
+               </div>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat blue">Submit</a>
+              </div>
+            </div>  
+        <section>
+    <!-----------findu madal1-->
+            <li><a class="btn-floating blue waves-effect waves-light btn modal-trigger" href="#modal3"><i class="material-icons">group</i></a></li>
+                   <!-- Modal Structure -->
+                   <div id="modal3" class="modal">
+                    <div class="modal-content">
+                      <h4 class="left">Add Users</h4>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="password" type="password" class="validate">
+                          <label for="password">Name</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <input id="password" type="password" class="validate">
+                          <label for="password">Email</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <input id="password" type="password" class="validate">
+                          <label for="password">password</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <input id="password" type="password" class="validate">
+                          <label for="password">Confirm password</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-close waves-effect waves-blue btn-flat blue">Submit</a>
+                    </div>
+                  </div>  
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+ </footer>
+
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+       <!----------courbe-->
+       <script>
+        window.onload = function () {
+        
+        var chart = new CanvasJS.Chart("chartContainer", {
+          animationEnabled: true,
+          theme: "light2",
+          title:{
+            text: "Simple Line Chart"
+          },
+          data: [{        
+            type: "line",
+                indexLabelFontSize: 16,
+            dataPoints: [
+              { y: 450 },
+              { y: 414},
+              { y: 520, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
+              { y: 460 },
+              { y: 450 },
+              { y: 500 },
+              { y: 480 },
+              { y: 480 },
+              { y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+              { y: 500 },
+              { y: 480 },
+              { y: 510 }
+            ]
+          }]
+        });
+        chart.render();
+        
+        }
+        </script>
+      <script>
+ 
+ var navBar = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(navBar, {
+  });
+
+  var FormSelect = document.querySelectorAll('select');
+    M.FormSelect.init(FormSelect,{});
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.querySelectorAll('.fixed-action-btn');
+     M.FloatingActionButton.init(btn, {
+      direction: 'top'
+    });
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+  
+  ClassicEditor
+      .create( document.querySelector( '#editor' ) )
+      .catch( error => {
+          console.error( error );
+      } );
+
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+   </script>
+    
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+</body>
+</html>
